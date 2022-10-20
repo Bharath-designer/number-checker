@@ -1,0 +1,227 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #BCD9F5;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+}
+
+#app {
+    background-color: white;
+    width: min(1100px, 90%);
+    min-height: 60vh;
+    margin: 40px auto;
+    border-radius: 20px;
+    overflow-x: hidden;
+    box-shadow: 0 0 20px -4px rgba(0, 0, 0, 0.671);
+}
+
+.nav-bar {
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-bar button {
+    outline: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 20px 0;
+    flex: 1;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 500;
+
+}
+
+.nav-bar-line {
+    height: 3px;
+    background-color: #C1C1C1;
+    width: 100%;
+    position: relative;
+
+}
+
+.nav-bar-active-indicator {
+    width: calc(100% / 3);
+    height: 4px;
+    background: #FF9446;
+    position: absolute;
+    transition: 0.3s ease-out;
+    border-radius: 10px;
+    left: 0;
+    bottom: 0;
+}
+
+.nav-bar-active-indicator.middle {
+    left: 33%;
+}
+
+.nav-bar-active-indicator.right {
+    left: 67%;
+}
+
+.description {
+    width: 80%;
+    margin: 30px auto;
+
+}
+
+.grey-line {
+    height: 1px;
+    background-color: #E2E2E2;
+    width: 100%;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.264);
+}
+
+form {
+    margin: 40px auto;
+    width: 80%;
+    display: flex;
+}
+
+
+form input {
+    flex: 1;
+    padding: 0 30px;
+    background-color: #F3F3F3;
+    border: none;
+    outline: 3px solid transparent;
+}
+
+form input:focus {
+    outline: 3px solid #BCD9F5;
+    transition: outline 0.2s;
+}
+
+
+form button {
+    color: white;
+    padding: 15px 30px;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: rgb(127, 164, 218);
+    background: linear-gradient(4deg, rgba(127, 164, 218, 1) 0%, rgba(168, 199, 237, 1) 100%);
+}
+
+form button:hover {
+    background: linear-gradient(90deg, rgba(127, 164, 218, 1) 0%, rgba(168, 199, 237, 1) 100%);
+}
+
+form button:active {
+    outline: 3px solid #BCD9F5;
+}
+
+.result-container {
+    display: none;
+    width: 80%;
+    margin: 60px auto;
+    color: white;
+    background: #64c295e5;
+    text-align: center;
+    padding: 30px 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.result-container.warning {
+    background: #ff5e5e91;
+}
+
+.result-container + .close {
+    width: 20px;
+    aspect-ratio: 1;
+    background: url('./close-icon.svg');
+    background-size: cover;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width:800px) {
+    body {
+        font-size: 15px;
+    }
+
+    .nav-bar {
+        gap: 7px;
+    }
+
+    .nav-bar button {
+        font-size: 15px;
+        padding: 10px 0;
+    }
+
+
+    .description {
+        width: 90%;
+        margin: 30px auto;
+
+    }
+
+    form {
+        margin: 40px auto;
+        width: 90%;
+        display: flex;
+    }
+
+    form button {
+        padding: 10px 15px;
+    }
+
+    .result-container {
+        width: 90%;
+        padding: 15px 20px;
+        margin-top: 40px;
+
+    }
+
+    .result-container::before {
+        width: 15px;
+        top: 5px;
+        right: 5px;
+    }
+
+}
+
+
+@media screen and (max-width:450px) {
+    body {
+        font-size: 14px;
+    }
+
+    form {
+        display: block;
+        text-align: center;
+    }
+
+    form input {
+        height: 50px;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width:300px) {
+    .nav-bar {
+        gap: 4px;
+    }
+
+    body {
+        font-size: 12px;
+    }
+
+    .nav-bar button {
+        font-size: 13px;
+        padding: 10px 0;
+    }
+}

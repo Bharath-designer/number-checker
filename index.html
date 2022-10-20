@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A website to check whether a number is Armstrong, Prime or Palindrome">
+    <title>Armstrong, Prime, Palindrome Checker Online</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="app">
+        <div class="nav-bar">
+            <button class="select-btn" data-tab="item1">Armstrong Checker </button>
+            <button class="select-btn" data-tab="item2">Prime Checker</button>
+            <button class="select-btn" data-tab="item3">Palindrome Checker</button>
+        </div>
+
+        <div class="nav-bar-line">
+            <div class="nav-bar-active-indicator"></div>
+        </div>
+
+        <div class="tab" id="item1">
+
+            <div class="description">
+                Armstrong number is a number that is equal to the sum of cubes of its digits.
+                For example 0, 1, 153, 370, 371 and 407 are the Armstrong numbers.
+            </div>
+            <div class="grey-line">
+            </div>
+
+            <form onsubmit="armstrongSubmit(event)">
+                <input class="armstrong-input" placeholder="Enter number" type="number">
+                <button class="armstrong-submit" type="submit">Check Number</button>
+            </form>
+
+            <div class="result-container armstrong-result"></div>
+
+
+        </div>
+        <div class="tab" id="item2">
+
+            <div class="description">
+                Prime number is a number that is greater than 1 and divided by 1 or itself only. In other words, prime
+                numbers can't be divided by other numbers than itself or 1.
+            </div>
+
+            <div class="grey-line">
+            </div>
+
+            <form onsubmit="primeSubmit(event)">
+                <input class="prime-input" placeholder="Enter number" type="number">
+                <button class="prime-submit" type="submit">Check Number</button>
+            </form>
+
+            <div class="result-container prime-result"></div>
+
+        </div>
+        <div class="tab" id="item3">
+
+            <div class="description">
+                A palindrome number is a number that is same after reverse.
+            </div>
+            <div class="grey-line">
+            </div>
+
+            <form onsubmit="palindromeSubmit(event)">
+                <input class="palindrome-input" placeholder="Enter Text" type="text">
+                <button class="palindrome-submit" type="submit">Check Text</button>
+            </form>
+
+            <div class="result-container palindrome-result"></div>
+
+
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
