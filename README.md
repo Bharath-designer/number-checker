@@ -1,7 +1,7 @@
 # number-checker
 A website to check whether a number is Armstrong, Prime or Palindrome
 
-## Live at <a href="https://bharath-designer.github.io/number-checker/">https://bharath-designer.github.io/number-checker/<a/>
+## Live at <a href="https://bharath-designer.github.io/number-checker/">here/<a/>
 
 
 Technologies Used
