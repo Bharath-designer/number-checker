@@ -4,7 +4,7 @@ A website to check whether a number is Armstrong, Prime or Palindrome
 ## Live at <a href="https://bharath-designer.github.io/number-checker/">here<a/>
 
 
-Technologies Used
+## Technologies Used
 
 
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
