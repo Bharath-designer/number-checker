@@ -43,19 +43,17 @@ const armstrongSubmit = e => {
     document.querySelector(".armstrong-input").value = ""
     let result = document.querySelector(".armstrong-result")
     if (!value) return 
+    
+    
 
-    var flag, remainder, addition = 0;
-
-    flag = value;
-    while (flag > 0) {
-        remainder = flag % 10;
-        addition = addition + remainder * remainder * remainder;
-        flag = parseInt(flag / 10);
-    }
-
+    let list = value.split("")
+    list = list.map((x)=>(parseInt(x)) ** value.length )
+    let sum = list.reduce((a, b) => {
+        return a + b;
+      });
     result.style.display = "block"
 
-    if (addition == value) {
+    if (sum == value) {
         result.classList.remove("warning")
         result.innerHTML = value + " is an Amstrong number"
     } else {
